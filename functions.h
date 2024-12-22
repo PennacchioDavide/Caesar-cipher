@@ -1,0 +1,1 @@
+char *cypher(char *phrase, int dec);
