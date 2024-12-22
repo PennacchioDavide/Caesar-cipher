@@ -3,8 +3,12 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
-    char *s = cypher("ABCD", 2);
-    printf("%s", s);
+
+    char *phrase = "ABCD";
+    char *s = cypher(phrase, 2);
+    printf("%s\n", s);
+
     free(s);
+    
     return 0;
 }

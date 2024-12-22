@@ -11,14 +11,19 @@ char *cypher(char *phrase, int dec) {
         return NULL;
     }
 
-    int i;
-    for(i = 0; phrase[i] != '\0'; i++) {
-        phrase[i]+= dec;
+    for (int i = 0; i < len; i++) {
+        char c = phrase[i];
+
+        res[i] = c + dec;
     }
+
     res[len] = '\0';
     return res;
 }
 
 // Part to Decypher
+char *decypher(char *phrase, int dec) {
+    return cypher(phrase, -dec);
+}
 
 // Part to Brutforce
